@@ -1,0 +1,8 @@
+pdfplumber
+pandas
+oci
+openpyxl
+langchain-huggingface 
+huggingface_hub 
+python-dotenv
+streamlit
