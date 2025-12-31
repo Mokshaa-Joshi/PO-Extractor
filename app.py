@@ -18,16 +18,16 @@ if "oci" not in st.secrets:
 
 # ================= OCI CONFIG (STREAMLIT CLOUD SAFE) =================
 OCI_CONFIG = {
-    "user": st.secrets["oci"]["user"],
-    "fingerprint": st.secrets["oci"]["fingerprint"],
-    "tenancy": st.secrets["oci"]["tenancy"],
-    "region": st.secrets["oci"]["region"],
-    "key_content": st.secrets["oci"]["private_key"],
+    "user": st.secrets["oci_user"],
+    "fingerprint": st.secrets["oci_fingerprint"],
+    "tenancy": st.secrets["oci_tenancy"],
+    "region": st.secrets["oci_region"],
+    "key_content": st.secrets["oci_private_key"],
 }
 
-COMPARTMENT_ID = st.secrets["oci"]["compartment_id"]
-MODEL_ID = st.secrets["oci"]["model_id"]
-ENDPOINT = st.secrets["oci"]["endpoint"]
+COMPARTMENT_ID = st.secrets["compartment_id"]
+MODEL_ID = st.secrets["model_id"]
+ENDPOINT = st.secrets["endpoint"]
 
 client = oci.generative_ai_inference.GenerativeAiInferenceClient(
     config=OCI_CONFIG,
